@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyeux Anniversaire, Eliotouner!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="greeting">🎉 Joyeux Anniversaire, Eliotouner ! 🎉</h1>
+        <p class="message">Petit cadeau de ton Erwanouner personnalisé!!</p>
+
+        <!-- Texte "20 ans" avec effet -->
+        <div class="birthday-text">20 ANS</div>
+
+        <button class="button" onclick="toggleMode()">Mode Caca 💩</button>
+        <button class="button" onclick="showThanks()">Clique là pour voir mon message</button>
+
+    </div>
+
+    <div class="thankyou hidden">
+        <h2>Merci, Eliotouner !</h2>
+        <p>Mon cher Eliot, je voulais juste te dire combien tu es un très bon ami. Ces années d'amitié ont été
+            une vraie aventure, toi même tu sais tous les délires qu'on a partagés ! Des moments
+            complètement fous, des rires et des souvenirs qu'on n'oubliera jamais. Merci d'être là avec ton humour, ta
+            joie de vivre et ton énergie débordante. J'espère qu'on aura encore de
+            nombreuses années à rire ensemble, à créer des souvenirs et à grandir côte à côte. 🎉<br><br>
+            Je te souhaite un très joyeux anniversaire, Eliotouner ! 🎂<br><br>
+            Erwanouner</p>
+
+        <button class="button" onclick="showConfetti()">🎊 Lancer les confettis 🎊</button>
+        <button class="button" onclick="showGallery()">Voir les dossiers</button>
+    </div>
+
+    <!-- Galerie de photos -->
+    <div class="gallery hidden">
+        <button class="button" onclick="closeGallery()">Fermer</button>
+        <div class="photo-gallery">
+            <img src="Photo_Eliot/Eliot1.jpg" alt="Eliot1.jpg" class="photo-slide">
+            <img src="Photo_Eliot/Eliot2.jpg" alt="Eliot2.jpg" class="photo-slide">
+            <img src="Photo_Eliot/Eliot3.jpg" alt="Eliot3.jpg" class="photo-slide">
+            <img src="Photo_Eliot/Eliot4.jpg" alt="Eliot4.jpg" class="photo-slide">
+            <img src="Photo_Eliot/Eliot5.jpg" alt="Eliot5.jpg" class="photo-slide">
+            <img src="Photo_Eliot/Eliot6.jpg" alt="Eliot6.jpg" class="photo-slide">
+            <img src="Photo_Eliot/Eliot14.jpg" alt="Eliot14.jpg" class="photo-slide">
+            <img src="Photo_Eliot/Eliot8.jpg" alt="Eliot8.jpg" class="photo-slide">
+            <img src="Photo_Eliot/Eliot9.jpg" alt="Eliot9.jpg" class="photo-slide">
+            <img src="Photo_Eliot/Eliot10.jpg" alt="Eliot10.jpg" class="photo-slide">
+            <img src="Photo_Eliot/Eliot11.jpg" alt="Eliot11.jpg" class="photo-slide">
+            <img src="Photo_Eliot/Eliot13.jpg" alt="Eliot13.jpg" class="photo-slide">
+
+
+            <!-- Ajoutez d'autres photos ici -->
+        </div>
+        <button class="button" onclick="nextSlide()">Suivant</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

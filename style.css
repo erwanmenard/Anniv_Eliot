@@ -1,0 +1,400 @@
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, rgb(255, 0, 30), rgb(109, 18, 33));
+    color: #fff;
+}
+
+/* Conteneur principal et de remerciement */
+.container,
+.thankyou {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+}
+
+/* Styles pour les titres */
+h1,
+h2 {
+    font-family: 'Pacifico', cursive; /* Police festive manuscrite */
+    position: relative;
+    top: -20%;
+    animation: pop 1s ease;
+    margin-bottom: 20px;
+}
+
+/* Style des messages */
+.message,
+.thankyou p {
+    font-family: 'Pacifico', cursive; /* Police festive manuscrite */
+    position: relative;
+    top: -10%;
+    font-size: 1.2rem;
+    padding: 0 10px;
+}
+
+/* Style des boutons */
+.button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ed163d;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+}
+
+/* Cache les éléments */
+.hidden {
+    display: none;
+}
+
+/* Animation de pop pour les titres */
+@keyframes pop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Animation de rebond pour les boutons */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animation des confettis */
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    opacity: 0.8;
+    border-radius: 50%;
+    animation: fall 4s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* Animation de scintillement pour le titre */
+.greeting {
+    animation: flash 1.5s infinite alternate;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+}
+
+/* Effet de rotation pour le bouton */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(3deg);
+    }
+
+    100% {
+        transform: rotate(-3deg);
+    }
+}
+
+/* Animation pour le texte dans le mode de remerciement */
+.thankyou h2,
+.thankyou p {
+    animation: bounceUp 2s infinite alternate;
+}
+
+@keyframes bounceUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animation des étoiles */
+.star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Conteneur des étoiles */
+.star-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Conteneur des cadeaux */
+.gift-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Style des cadeaux */
+.gift {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #ff4081;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    animation: giftFall 4s linear infinite;
+}
+
+.gift::before,
+.gift::after {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+}
+
+.gift::before {
+    width: 4px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gift::after {
+    width: 100%;
+    height: 4px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@keyframes giftFall {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.poop-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.poop {
+    position: absolute;
+    font-size: 40px;
+    color: #7e5e4d;
+    text-align: center;
+    line-height: 40px;
+    animation: poopFall 4s linear infinite;
+}
+
+@keyframes poopFall {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Style du texte "20 ANS" en arrière-plan */
+.birthday-text {
+    font-size: 18rem;
+    /* Taille du texte ajustée */
+    font-weight: bold;
+    color: rgba(255, 64, 129, 0.4);
+    /* Opacité réduite */
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    /* Espacement des lettres */
+    animation: partyText 4s ease-in-out infinite, glow 1.5s ease-in-out infinite;
+    position: absolute;
+    top: 50%;
+    /* Centrage vertical */
+    left: 50%;
+    /* Centrage horizontal */
+    transform: translate(-50%, -50%);
+    /* Centrage exact */
+    z-index: -1;
+    /* Mettre le texte en arrière-plan */
+    filter: blur(5px);
+    /* Ajouter un flou léger */
+}
+
+/* Animation festive (mouvement et changement de couleur) */
+@keyframes partyText {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) rotate(15deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(-15deg);
+    }
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 15px rgba(255, 64, 129, 0.4), 0 0 25px rgba(255, 64, 129, 0.3), 0 0 35px rgba(255, 64, 129, 0.2);
+    }
+
+    50% {
+        text-shadow: 0 0 25px rgba(255, 64, 129, 0.5), 0 0 45px rgba(255, 64, 129, 0.4), 0 0 65px rgba(255, 64, 129, 0.3);
+    }
+}
+
+/* Galerie d'images */
+.gallery {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+}
+
+.photo-slide {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
