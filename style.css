@@ -36,7 +36,7 @@ h1,
 h2 {
     font-family: 'Pacifico', cursive; /* Police festive manuscrite */
     position: relative;
-    top: -20%;
+    top: -10%;
     animation: pop 1s ease;
     margin-bottom: 20px;
 }
@@ -46,7 +46,7 @@ h2 {
 .thankyou p {
     font-family: 'Pacifico', cursive; /* Police festive manuscrite */
     position: relative;
-    top: -10%;
+    top: -2%;
     font-size: 1.5rem;
     padding: 0 10px;
 }
