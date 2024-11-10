@@ -45,18 +45,28 @@ function generateStars() {
     }
 }
 
-// Fonction pour générer des cadeaux
+// Fonction pour générer des cadeaux festifs qui tombent
 function generateGifts() {
     const giftContainer = document.createElement('div');
     giftContainer.classList.add('gift-container');
     document.body.appendChild(giftContainer);
 
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 30; i++) { // Augmenter le nombre de cadeaux
         const gift = document.createElement('div');
         gift.classList.add('gift');
+
+        // Styles variés pour chaque cadeau
         gift.style.left = Math.random() * 100 + 'vw';
+        gift.style.width = Math.random() * 30 + 20 + 'px';
+        gift.style.height = Math.random() * 30 + 20 + 'px';
+        gift.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 70%)`;
+        gift.style.borderRadius = Math.random() > 0.5 ? '5%' : '50%';
         gift.style.animationDelay = Math.random() * 5 + 's';
+        gift.style.animationDuration = Math.random() * 3 + 5 + 's'; // Durée de chute variable
+
         giftContainer.appendChild(gift);
+
+
     }
 }
 
