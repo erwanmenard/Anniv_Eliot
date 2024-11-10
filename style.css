@@ -242,8 +242,8 @@ h2 {
     background-color: #ff4081;
     border-radius: 5px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-    animation: fall 5s linear infinite, rotate 4s linear infinite;
-    /* Ajout de l'animation de rotation */
+    animation: fallAndRotate 5s linear infinite;
+    /* Animation combinée */
     opacity: 0.9;
 }
 
@@ -271,35 +271,22 @@ h2 {
 }
 
 
-/* Effet de chute des cadeaux avec un brin de transparence */
-@keyframes fall {
+/* Animation combinée de chute et de rotation */
+@keyframes fallAndRotate {
     0% {
-        transform: translateY(-20px);
-        opacity: 0.9;
-        /* Opacité de départ */
+        transform: translateY(-100px) rotate(0deg);
+        /* Départ au-dessus de l'écran */
+        opacity: 1;
     }
 
     50% {
-        opacity: 0.7;
-        /* Opacité intermédiaire */
+        opacity: 0.8;
     }
 
     100% {
-        transform: translateY(100vh);
+        transform: translateY(100vh) rotate(360deg);
+        /* Fin de chute avec une rotation complète */
         opacity: 0.5;
-        /* Opacité réduite au bas */
-    }
-}
-
-/* Animation pour la rotation */
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-        /* Tourne à 360 degrés */
     }
 }
 
