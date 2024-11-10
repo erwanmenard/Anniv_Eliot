@@ -236,7 +236,6 @@ h2 {
     border-radius: 5px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
     animation: giftFall 4s linear infinite;
-    top: -50px; /* pour commencer hors de l'écran */
     animation-name: fall;
     animation-timing-function: linear;
     pointer-events: none; /* pour éviter toute interaction avec les éléments */
