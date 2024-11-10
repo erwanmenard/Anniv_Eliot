@@ -34,7 +34,8 @@ body {
 /* Styles pour les titres */
 h1,
 h2 {
-    font-family: 'Pacifico', cursive; /* Police festive manuscrite */
+    font-family: 'Pacifico', cursive;
+    /* Police festive manuscrite */
     position: relative;
     top: -4%;
     animation: pop 1s ease;
@@ -44,7 +45,8 @@ h2 {
 /* Style des messages */
 .message,
 .thankyou p {
-    font-family: 'Pacifico', cursive; /* Police festive manuscrite */
+    font-family: 'Pacifico', cursive;
+    /* Police festive manuscrite */
     position: relative;
     top: 0%;
     font-size: 1.4rem;
@@ -159,8 +161,13 @@ h2 {
 
 
 @keyframes rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Animation pour le texte dans le mode de remerciement */
@@ -227,7 +234,7 @@ h2 {
     z-index: -1;
 }
 
-/* Style des cadeaux */
+/* Styles des cadeaux */
 .gift {
     position: absolute;
     width: 30px;
@@ -235,10 +242,8 @@ h2 {
     background-color: #ff4081;
     border-radius: 5px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-    animation: giftFall 4s linear infinite;
-    animation-name: fall;
-    animation-timing-function: linear;
-    pointer-events: none; /* pour éviter toute interaction avec les éléments */
+    animation: fall 5s linear infinite; /* Chute plus douce */
+    opacity: 1; /* Retire toute transparence */
 }
 
 .gift::before,
@@ -264,20 +269,18 @@ h2 {
     transform: translateY(-50%);
 }
 
-@keyframes giftFall {
+
+/* Effet de chute des cadeaux */
+@keyframes fall {
     0% {
-        transform: translateY(-50px) rotate(0deg);
+        transform: translateY(-10px); /* Démarre juste au-dessus du haut de l'écran */
         opacity: 1;
     }
 
     100% {
-        transform: translateY(100vh) rotate(360deg);
-        opacity: 0;
+        transform: translateY(100vh); /* Descend jusqu’en bas de l’écran */
+        opacity: 1; /* Maintient l’opacité pour éviter la disparition */
     }
-}
-@keyframes fall {
-    0% { transform: translateY(-100vh); opacity: 1; }
-    100% { transform: translateY(100vh); opacity: 0; }
 }
 
 .poop-container {
