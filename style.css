@@ -242,8 +242,9 @@ h2 {
     background-color: #ff4081;
     border-radius: 5px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-    animation: fall 5s linear infinite; /* Chute plus douce */
-    opacity: 1; /* Retire toute transparence */
+    animation: fall 5s linear infinite;
+    opacity: 0.9;
+    /* Opacité initiale légèrement réduite */
 }
 
 .gift::before,
@@ -270,16 +271,23 @@ h2 {
 }
 
 
-/* Effet de chute des cadeaux */
+/* Effet de chute des cadeaux avec un brin de transparence */
 @keyframes fall {
     0% {
-        transform: translateY(-10px); /* Démarre juste au-dessus du haut de l'écran */
-        opacity: 1;
+        transform: translateY(-20px);
+        opacity: 0.9;
+        /* Opacité de départ */
+    }
+
+    50% {
+        opacity: 0.7;
+        /* Opacité intermédiaire */
     }
 
     100% {
-        transform: translateY(100vh); /* Descend jusqu’en bas de l’écran */
-        opacity: 1; /* Maintient l’opacité pour éviter la disparition */
+        transform: translateY(100vh);
+        opacity: 0.5;
+        /* Opacité réduite au bas */
     }
 }
 
